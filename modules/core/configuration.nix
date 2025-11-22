@@ -79,14 +79,14 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.johnd = {
-    isNormalUser = true;
-    description = "johnd";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
+  # users.users.johnd = {
+  #   isNormalUser = true;
+  #   description = "johnd";
+  #   extraGroups = [ "networkmanager" "wheel" ];
+  #   packages = with pkgs; [
+  #   #  thunderbird
+  #   ];
+  # };
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
