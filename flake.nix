@@ -10,9 +10,10 @@
     };
   };
 
-  outputs = { nixpkgs, ... } @ inputs: 
+  outputs = { nixpkgs, self, ... } @ inputs: 
   let
     # pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    username = "johnd";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -22,20 +23,24 @@
     };
   in
   {
-
-	#    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-	#      specialArgs = { inherit inputs system; };
-	#      modules = [
-	# ./configuration.nix
-	#      ];
-	#    };
     nixosConfigurations = {
+      # Rewrite of the basic flake, want to migrate away from this
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
 	modules = [
           ./configuration.nix
 	];
       };
+
+      desktop = nixpkgs.lib.nixosSystem {
+        inherit system;
+	modules = [ ./hosts/desktop ];
+	specialArgs = {
+          host = "desktop";
+	  inherit self inputs username;
+	};
+      };
+
     };
   };
 }

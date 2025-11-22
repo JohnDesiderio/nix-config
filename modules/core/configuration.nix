@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      # ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -145,10 +145,10 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      johnd = import ./home.nix;
-    };
-  };
+  # home-manager = {
+  #   extraSpecialArgs = { inherit inputs; };
+  #   users = {
+  #     johnd = import ./home.nix;
+  #   };
+  # };
 }
