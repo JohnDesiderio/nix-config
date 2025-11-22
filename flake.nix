@@ -23,11 +23,19 @@
   in
   {
 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs system; };
-      modules = [
-	./configuration.nix
-      ];
+	#    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+	#      specialArgs = { inherit inputs system; };
+	#      modules = [
+	# ./configuration.nix
+	#      ];
+	#    };
+    nixosConfigurations = {
+      nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs system; };
+	modules = [
+          ./configuration.nix
+	];
+      };
     };
   };
 }
