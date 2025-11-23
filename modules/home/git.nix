@@ -4,7 +4,7 @@
     enable = true;
 
     settings = {
-      user = = {
+      user = {
         name = "JohnDesiderio";
         email = "johnfrancisdesiderio@gmail.com";
       };
@@ -34,9 +34,9 @@
     serie
   ];
 
-  xdg.configFile"git/.gitignore".text = ''
+  xdg.configFile."git/.gitignore".text = ''
     .vscode
-  ''
+  '';
 
   # Gotta figure out aliases I guess
 }

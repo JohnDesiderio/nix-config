@@ -11,7 +11,7 @@
 
       displayManager.autoLogin = {
         enable = true;
-        user = "${johnd}"
+        user = "${username}";
       };
     # Enable touchpad support, prolly won't need this for a while  
     #   libinput = {
