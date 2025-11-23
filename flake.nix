@@ -36,7 +36,7 @@
         inherit system;
 	modules = [ ./hosts/desktop ];
 	specialArgs = {
-          host = "desktop";
+          host = "nixos";
 	  inherit self inputs username;
 	};
       };
