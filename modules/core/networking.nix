@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   networking = {
     # this might've broken everything lasttime lmao 
