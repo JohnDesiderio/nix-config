@@ -21,26 +21,18 @@
         allowUnfree = true;
       };
     };
+    lib = nixpkgs.lib;
   in
   {
     nixosConfigurations = {
-      # Rewrite of the basic flake, want to migrate away from this
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs system; };
-	modules = [
-          ./configuration.nix
-	];
-      };
-
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
 	modules = [ ./hosts/desktop ];
 	specialArgs = {
-          host = "nixos";
+          host = "desktop";
 	  inherit self inputs username;
 	};
       };
-
     };
   };
 }
