@@ -1,12 +1,12 @@
 { ... }:
 {
   imports = [
-    ./configuration.nix
     ./networking.nix
     ./pipewire.nix
+    ./security.nix
     ./services.nix
     ./system.nix
-    ./xserver.nix
     ./user.nix
+    ./xserver.nix
   ];
 }
