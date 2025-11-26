@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./bootloader.nix
     ./networking.nix
     ./pipewire.nix
     ./security.nix
