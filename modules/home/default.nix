@@ -8,6 +8,7 @@
     ./hyprland
     ./lazygit.nix
     ./nvim.nix
+    ./packages
     ./vscodium
   ];
 }
