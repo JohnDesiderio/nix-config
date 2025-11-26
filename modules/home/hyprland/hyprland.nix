@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    sww 
+    swww 
     grimblast
     hyprpicker
     grim

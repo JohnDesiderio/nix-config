@@ -4,7 +4,7 @@
     ./gaming.nix
     ./git.nix
     ./gtk.nix
-    # ./hyprland
+    ./hyprland
     ./lazygit.nix
     ./nvim.nix
   ];
