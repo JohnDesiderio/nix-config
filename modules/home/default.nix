@@ -9,6 +9,8 @@
     ./lazygit.nix
     ./nvim.nix
     ./packages
+    ./rofi/rofi.nix
+    ./vicinae.nix
     ./vscodium
   ];
 }
