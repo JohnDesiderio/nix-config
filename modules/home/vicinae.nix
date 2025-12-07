@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  system = pkgs.stdenv.hostPlayform.system;
+  system = pkgs.stdenv.hostPlatform.system;
 in
 {
   imports = [ inputs.vicinae.homeManagerModules.default ];
@@ -23,9 +23,9 @@ in
       rounding = 0;
     };
 
-    faviconService = "twenty";
+    # faviconService = "twenty";
     popToRootOnClose = true;
-    closeOnFocusLoss = true;
+    # closeOnFocusLoss = true;
 
     rootSearch = {
         searchFiles = true;
@@ -56,5 +56,5 @@ in
     red = "#cc241d"
     yellow = "#d79921"
     cyan = "#689d6a"
-  ''
-};
+  '';
+}

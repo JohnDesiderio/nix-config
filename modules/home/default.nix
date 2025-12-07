@@ -11,7 +11,7 @@
     ./nvim.nix
     ./packages
     ./rofi/rofi.nix
-    ./vicinae.nix
+    # ./vicinae.nix
     ./vscodium
   ];
 }
